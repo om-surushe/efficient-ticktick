@@ -2,7 +2,7 @@
  * Time utilities for LLM-friendly date formatting and timezone handling
  */
 
-import type { TimeContext } from '../types';
+import type { TimeContext } from '../types/index.js';
 
 const MINUTE = 60 * 1000;
 const HOUR = 60 * MINUTE;

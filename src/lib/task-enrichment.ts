@@ -2,8 +2,8 @@
  * Task enrichment - convert raw TickTick tasks to LLM-friendly format
  */
 
-import type { TickTickTask, TickTickProject, EnrichedTask, TickTickProjectData } from '../types';
-import { toTimeContext, isOverdue, isDueToday, isDueSoon } from '../utils/time';
+import type { TickTickTask, TickTickProject, EnrichedTask, TickTickProjectData } from '../types/index.js';
+import { toTimeContext, isOverdue, isDueToday, isDueSoon } from '../utils/time.js';
 
 export class TaskEnricher {
   private timezone: string;

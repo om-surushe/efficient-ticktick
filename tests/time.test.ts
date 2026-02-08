@@ -9,7 +9,7 @@ import {
   isDueToday,
   isDueSoon,
   parseFlexibleDate,
-} from '../src/utils/time';
+} from '../src/utils/time.js';
 
 describe('Time Utilities', () => {
   describe('toTimeContext', () => {

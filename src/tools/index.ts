@@ -2,10 +2,10 @@
  * LLM-optimized MCP tools for TickTick
  */
 
-import type { EnrichedTask, TaskSuggestion, TimeWindow } from '../types';
-import type { TickTickClient } from '../lib/ticktick-client';
-import type { TaskEnricher } from '../lib/task-enrichment';
-import { parseFlexibleDate } from '../utils/time';
+import type { EnrichedTask, TaskSuggestion, TimeWindow } from '../types/index.js';
+import type { TickTickClient } from '../lib/ticktick-client.js';
+import type { TaskEnricher } from '../lib/task-enrichment.js';
+import { parseFlexibleDate } from '../utils/time.js';
 
 export class TickTickTools {
   constructor(

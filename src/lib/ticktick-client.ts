@@ -2,7 +2,7 @@
  * TickTick API client
  */
 
-import type { TickTickConfig, TickTickProject, TickTickProjectData, TickTickTask } from '../types';
+import type { TickTickConfig, TickTickProject, TickTickProjectData, TickTickTask } from '../types/index.js';
 
 export class TickTickClient {
   private config: TickTickConfig;
