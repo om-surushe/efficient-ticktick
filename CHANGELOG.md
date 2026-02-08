@@ -7,11 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed
-- Renamed to `@omsurushe/efficient-ticktick` to emphasize LLM optimization and cost efficiency
-- Updated all documentation and branding
-
 ## [0.1.0] - 2026-02-08
+
+### Published
+- 🎉 **First public release on npm!**
+- Published as `@om-surushe/efficient-ticktick`
+- Available via `bunx @om-surushe/efficient-ticktick`
+
+### Changed
+- Renamed to `@om-surushe/efficient-ticktick` to emphasize LLM optimization and cost efficiency
+- Corrected npm scope to match username (`@om-surushe` with hyphen)
+- Updated all documentation and branding
 
 ### Added
 - Initial release of Efficient TickTick MCP

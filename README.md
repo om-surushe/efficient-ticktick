@@ -1,12 +1,45 @@
 # Efficient TickTick
 
+[![npm version](https://img.shields.io/npm/v/@om-surushe/efficient-ticktick.svg)](https://www.npmjs.com/package/@om-surushe/efficient-ticktick)
+[![npm downloads](https://img.shields.io/npm/dm/@om-surushe/efficient-ticktick.svg)](https://www.npmjs.com/package/@om-surushe/efficient-ticktick)
 [![CI](https://github.com/om-surushe/efficient-ticktick/actions/workflows/ci.yml/badge.svg)](https://github.com/om-surushe/efficient-ticktick/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
 [![Bun](https://img.shields.io/badge/Bun-1.0+-f472b6.svg)](https://bun.sh/)
-[![npm](https://img.shields.io/badge/npm-@om--surushe/efficient--ticktick-red.svg)](https://www.npmjs.com/package/@om-surushe/efficient-ticktick)
 
 **Part of the Efficient MCP series - TickTick task management optimized for LLMs with 70% lower token costs.**
+
+> **🎉 Now Published!** Install with `bunx @om-surushe/efficient-ticktick`
+
+## Quick Start
+
+```bash
+# Install globally
+npm install -g @om-surushe/efficient-ticktick
+
+# Or run directly
+bunx @om-surushe/efficient-ticktick
+```
+
+**Get your TickTick API token:** Settings → Open API → Copy token
+
+**Add to your MCP client config:**
+```json
+{
+  "mcpServers": {
+    "efficient-ticktick": {
+      "command": "bunx",
+      "args": ["@om-surushe/efficient-ticktick"],
+      "env": {
+        "TICKTICK_TOKEN": "tp_your_token_here",
+        "TIMEZONE": "Asia/Kolkata"
+      }
+    }
+  }
+}
+```
+
+That's it! Your AI assistant can now intelligently manage your TickTick tasks.
 
 Unlike raw API access, this MCP server is designed specifically for AI assistants to understand and work with your tasks naturally. It handles timezone conversions, provides relative time contexts ("in 2 hours", "overdue by 3 days"), and offers semantic tools that make sense to LLMs.
 
@@ -27,6 +60,33 @@ Traditional task management APIs are built for human UIs. When an LLM uses them,
 - ✅ **Flexible input** - Accepts "today", "tomorrow", "next week" instead of just ISO dates
 - ✅ **Complete context** - One API call gives you everything (task + project + parent + time)
 
+## What Makes This Different?
+
+**Traditional TickTick API:**
+```json
+{
+  "title": "Finish proposal",
+  "dueDate": "2026-02-08T17:00:00+05:30"
+}
+```
+→ LLM has to parse dates, calculate "is this overdue?", do timezone math, etc. = **More tokens, slower responses**
+
+**Efficient TickTick MCP:**
+```json
+{
+  "title": "Finish proposal",
+  "dueDate": {
+    "iso": "2026-02-08T17:00:00+05:30",
+    "relative": "in 3 hours",
+    "userLocal": "Today, 5:00 PM IST"
+  },
+  "isOverdue": false,
+  "isDueToday": true,
+  "priority": "high"
+}
+```
+→ Everything pre-calculated. LLM just reads and responds. = **70% fewer tokens, instant context**
+
 ## Features
 
 - 🧠 **LLM-first design** - Optimized for AI assistant consumption
@@ -35,6 +95,7 @@ Traditional task management APIs are built for human UIs. When an LLM uses them,
 - 🔍 **Semantic search** - Find tasks by keyword, project, or deadline
 - 📊 **Batch operations** - Get complete context in a single call
 - 🚀 **Built with Bun** - Fast, modern TypeScript runtime
+- 💰 **Cost optimized** - 70% lower token usage vs raw API
 
 ## Installation
 
