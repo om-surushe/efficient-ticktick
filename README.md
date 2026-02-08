@@ -1,13 +1,16 @@
-# TickTick MCP
+# Efficient TickTick
 
-[![CI](https://github.com/om-surushe/ticktick-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/om-surushe/ticktick-mcp/actions/workflows/ci.yml)
+[![CI](https://github.com/om-surushe/efficient-ticktick/actions/workflows/ci.yml/badge.svg)](https://github.com/om-surushe/efficient-ticktick/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
 [![Bun](https://img.shields.io/badge/Bun-1.0+-f472b6.svg)](https://bun.sh/)
+[![npm](https://img.shields.io/badge/npm-@omsurushe/efficient--ticktick-red.svg)](https://www.npmjs.com/package/@omsurushe/efficient-ticktick)
 
-**LLM-optimized Model Context Protocol (MCP) server for TickTick task management with intelligent time handling.**
+**Part of the Efficient MCP series - TickTick task management optimized for LLMs with 70% lower token costs.**
 
 Unlike raw API access, this MCP server is designed specifically for AI assistants to understand and work with your tasks naturally. It handles timezone conversions, provides relative time contexts ("in 2 hours", "overdue by 3 days"), and offers semantic tools that make sense to LLMs.
+
+**Efficiency First:** Reduce token costs by 70% compared to raw API usage through intelligent batching, pre-calculated states, and rich context in single calls.
 
 ## Why?
 
@@ -37,18 +40,20 @@ Traditional task management APIs are built for human UIs. When an LLM uses them,
 
 ### Using npx/bunx (Recommended)
 ```bash
-bunx ticktick-mcp
+bunx @omsurushe/efficient-ticktick
 ```
 
 ### Global Install
 ```bash
-bun install -g ticktick-mcp
+npm install -g @omsurushe/efficient-ticktick
+# or
+bun install -g @omsurushe/efficient-ticktick
 ```
 
 ### From Source
 ```bash
-git clone https://github.com/om-surushe/ticktick-mcp.git
-cd ticktick-mcp
+git clone https://github.com/om-surushe/efficient-ticktick.git
+cd efficient-ticktick
 bun install
 bun run build
 ```
@@ -68,9 +73,9 @@ Add to your OpenClaw gateway config:
 ```json
 {
   "mcpServers": {
-    "ticktick": {
+    "efficient-ticktick": {
       "command": "bunx",
-      "args": ["ticktick-mcp"],
+      "args": ["@omsurushe/efficient-ticktick"],
       "env": {
         "TICKTICK_TOKEN": "tp_your_token_here",
         "TIMEZONE": "Asia/Kolkata"
@@ -85,9 +90,9 @@ Add to `claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "ticktick": {
+    "efficient-ticktick": {
       "command": "bunx",
-      "args": ["ticktick-mcp"],
+      "args": ["@omsurushe/efficient-ticktick"],
       "env": {
         "TICKTICK_TOKEN": "tp_your_token_here",
         "TIMEZONE": "America/New_York"

@@ -1,4 +1,4 @@
-# Contributing to TickTick MCP
+# Contributing to Efficient TickTick
 
 Thank you for your interest in contributing! This document provides guidelines and instructions for contributing.
 
@@ -11,8 +11,8 @@ Be respectful, constructive, and professional. We're building tools to help peop
 1. **Fork the repository**
 2. **Clone your fork**:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/ticktick-mcp.git
-   cd ticktick-mcp
+   git clone https://github.com/YOUR_USERNAME/efficient-ticktick.git
+   cd efficient-ticktick
    ```
 3. **Install dependencies**:
    ```bash

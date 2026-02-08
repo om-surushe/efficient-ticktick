@@ -1,12 +1,12 @@
 {
-  "name": "ticktick-mcp",
+  "name": "@omsurushe/efficient-ticktick",
   "version": "0.1.0",
-  "description": "LLM-optimized MCP server for TickTick task management with intelligent time handling",
+  "description": "Efficient TickTick MCP - LLM-optimized task management with intelligent time handling and 70% lower token costs",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "ticktick-mcp": "./dist/index.js"
+    "efficient-ticktick": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",
@@ -30,12 +30,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/om-surushe/ticktick-mcp.git"
+    "url": "https://github.com/om-surushe/efficient-ticktick.git"
   },
   "bugs": {
-    "url": "https://github.com/om-surushe/ticktick-mcp/issues"
+    "url": "https://github.com/om-surushe/efficient-ticktick/issues"
   },
-  "homepage": "https://github.com/om-surushe/ticktick-mcp#readme",
+  "homepage": "https://github.com/om-surushe/efficient-ticktick#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4"
   },

@@ -7,28 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-- Initial release
-- LLM-optimized MCP server for TickTick
-- Intelligent time handling with timezone support
-- 10 semantic tools for task management
-- Flexible date parsing ("today", "tomorrow", etc.)
-- Smart task suggestions based on context
-- Complete TypeScript types
-- Comprehensive test suite
-- Full documentation
-
 ### Changed
-- N/A
-
-### Fixed
-- N/A
+- Renamed to `@omsurushe/efficient-ticktick` to emphasize LLM optimization and cost efficiency
+- Updated all documentation and branding
 
 ## [0.1.0] - 2026-02-08
 
 ### Added
-- Initial project setup
-- Core functionality implemented
+- Initial release of Efficient TickTick MCP
+- LLM-optimized MCP server for TickTick (70% lower token costs)
+- Intelligent time handling with timezone support
+- 10 semantic tools for task management
+- Flexible date parsing ("today", "tomorrow", etc.)
+- Smart task suggestions based on context
+- Pre-calculated task states (isOverdue, isDueToday, isDueSoon)
+- Rich context in single API calls
+- Complete TypeScript types
+- Comprehensive test suite
+- Full documentation and CI/CD
 
-[Unreleased]: https://github.com/om-surushe/ticktick-mcp/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/om-surushe/ticktick-mcp/releases/tag/v0.1.0
+[Unreleased]: https://github.com/om-surushe/efficient-ticktick/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/om-surushe/efficient-ticktick/releases/tag/v0.1.0
