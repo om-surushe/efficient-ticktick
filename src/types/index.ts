@@ -40,7 +40,7 @@ export interface TickTickProject {
 export interface TickTickProjectData {
   project: TickTickProject;
   tasks: TickTickTask[];
-  columns: any[];
+  columns: unknown[];
 }
 
 /**

@@ -149,7 +149,7 @@ export function isDueSoon(dueDate?: string): boolean {
 /**
  * Parse flexible date input (for LLM tool calls)
  */
-export function parseFlexibleDate(input: string, timezone: string = 'Asia/Kolkata'): string {
+export function parseFlexibleDate(input: string): string {
   const lower = input.toLowerCase().trim();
   const now = new Date();
   
